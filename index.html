@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Quản Lý Điểm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hệ Thống Quản Lý Điểm</h1>
+        <div id="login-section">
+            <h2>Đăng Nhập</h2>
+            <form id="login-form">
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" required>
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Đăng nhập</button>
+                <p id="login-message"></p>
+            </form>
+        </div>
+
+        <div id="admin-section" class="hidden">
+            <h2>Quản Lý Điểm Số</h2>
+            <form id="add-student-form">
+                <label for="student-name">Tên học sinh:</label>
+                <input type="text" id="student-name" required>
+                <label for="student-score">Điểm số:</label>
+                <input type="number" id="student-score" step="0.1" required>
+                <label for="reason">Lý do:</label>
+                <input type="text" id="reason" required>
+                <button type="submit">Thêm/Sửa Điểm</button>
+            </form>
+            <p id="add-message"></p>
+        </div>
+
+        <div id="history-section" class="hidden">
+            <h2>Lịch Sử Thay Đổi</h2>
+            <ul id="history-list">
+                </ul>
+        </div>
+        
+        <div id="score-section">
+            <h2>Bảng Điểm</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Họ và Tên</th>
+                        <th>Điểm Số</th>
+                    </tr>
+                </thead>
+                <tbody id="score-table-body">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
